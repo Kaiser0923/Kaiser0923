@@ -1,0 +1,122 @@
+.sop{
+	background-color:#5AAFD1;
+	float:right;
+	width:50px;
+	height:30;
+}
+
+.footer {
+	background-color:#5AAFD1 ;
+	margin-left:0px;
+}
+.footer h5{
+	color : white;
+	padding: 10px 40px
+}
+header h1{
+	margin-left:20px;
+}
+.menu{
+	margin-left:-50px;
+}
+.menu li{
+	display: inline;
+}
+.menu li a{
+	padding: 8px 26px;
+	background-color:#5AAFD1;
+	margin-right:-2px;
+	color: white;
+}
+.menu li a:hover{
+	background-color:#63A3CB;
+}
+
+
+.clearfix{
+	*zoom:1;
+}
+.clearfix:before,
+.clearfix;after {
+	display: table;
+	line-height: 0;
+	content: 0;
+}
+
+.clearfix:after {
+	clear: both;	
+}
+
+.hide-text {
+	font: 0/0 a;
+	color: transparent;
+	border : 0;
+}
+
+.input-block-level {
+	display: block;
+	width: 100%;
+	min-height: 30px;
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+	
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+audio:not([controls]) {
+	display: none;
+}
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+		-ms-text-adjust: 100%;
+}
+
+a:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -O,5em;
+}
+
+sub {
+	bottom: -0,25em;
+	
