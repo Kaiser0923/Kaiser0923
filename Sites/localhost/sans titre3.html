@@ -1,0 +1,175 @@
+<form  method="POST" action ="Singn_serveur.php" onsubmit="return check()" class="whatsapp-form">
+		<div class="datainput">
+			<select id="wa_select" name="genre">
+				<option value="1">Monsieur</option>
+				<option value="2">Madame</option>
+			</select>
+		</div>
+		<div class="datainput">
+			<input class="validate" name="name" required="" type="text" value=''/>
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Nom</label>
+		</div>
+		<div class="datainput">
+			<input class="validate" name="prenom" required="" type="text" value="">
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Prénom</label>
+		</div>
+		<div class="datainput">
+			<input class="validate" name="pwd" required="" type="password" value=''/>
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Mot de passe</label>
+		</div>
+		<div class="datainput">
+			<input class="validate" name="motdepasse2" required="" type="password" value=''/>
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Confirmer le mot de passe</label>
+		</div>
+		<div class="datainput">
+			<input tpye="number" class="validate" id="wa_email" name="tel" required="" type="tel" value=''/>
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Numéro de tel</label>
+		</div> 
+		<div class="datainput">
+			<input class="validate" id="wa_email" id="mail" name="mail" required="" type="email" value=''/>
+			<span class="highlight"></span><span class="bar"></span>
+			<label>Adresse E-mail</label>
+		</div>
+		<input class="send_form" type="submit" value="Register"></input>
+		<div id="text-info"></div>
+</form>
+
+include_once('verification1.php');
+$db_db = new PDO ('mysql:host=localhost;dbname=zoo', $db_user, $db_password);
+
+
+$pdoStat = $db_db->prepare('SELECT * FROM ticket ORDER BY prio ASC');
+
+$executeIsOk = $pdoStat->execute();
+
+
+
+
+$mail = $_GET['mail'];
+$password = $_GET['password'];;
+
+if(isset($_POST['log'])){
+	
+	$password = $_POST['password'];
+	$mail = $_POST['mail'];
+	
+	
+	if($mail&&$password){
+	
+	
+	if($mail == $user&&$password == $password_definit){
+		
+	$_SESSION['username']=$username;
+		
+	
+		
+		
+}
+	else{
+	echo'Identifiant eronnes';
+}
+
+}
+	else{
+	echo'Veuillez remplir tous les champs';
+}
+
+}
+
+session_start();
+include_once('verification1.php');
+
+if(!empty($_POST)){
+	extract($_POST);
+    $valid = true;
+    
+    $mail = trim("mail");
+	$password = trim("password");
+
+
+	if(!empty($_POST)){
+		
+		if(empty($mail)){
+		$valid = false;
+		$error_mail= "Veuillez renseigner un mail";
+		
+		}
+		
+		
+		if(empty($password)){
+		$valid = false;
+		$error_password= "Veuillez renseigner un password";
+		
+		}
+		
+		$req = $db_db->query("SELECT mail FROM `user` WHERE `mail`= $mail AND `password`= $password ");
+		$re = $req->fetch();
+		
+		if(!$req['mail']){
+			
+			echo "Votre mail ou password est incorrect";
+			
+			}
+
+			if($valid){
+				
+				}
+   
+}
+
+
+
+
+
+if(isset($_POST['submit'])){
+	
+$mail = $_POST['mail'];
+$password = $_POST['password'];
+
+	if($mail == "ngankamariel@yahoo.fr"){
+		if($password == "1234"){
+			$error = "";
+			$success = "Welcome Ariel!!!!!";
+			header("Location:Bonjour.php");
+			}else{
+				$error = "Invalid Password!!!!";
+			$success = "";
+				}
+		
+		}else{
+				$error = "Invalid mail!!!!!!";
+			$success = "";
+			}
+	}
+
+$error = "";
+$success = "";
+
+if(isset($_POST['submit'])){
+	
+
+
+	if(isset($_POST['mail']) && isset($_POST['password'])){
+		$mail = $_POST['mail'];
+
+		require_once('verification1.php');
+		
+		$sql = "SELECT * FROM `user` WHERE `mail`=$mail";
+		
+		$query = $db_db->prepare($sql);
+	    $query->binValue("$mail", $_POST["mail"], PDO::PARAM_STR);
+		$query->execute;
+		$user= $query->fetch();
+		
+		var_dump($user);die;
+		
+			}
+	
+	
+	
+}

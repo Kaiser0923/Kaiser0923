@@ -1,0 +1,93 @@
+
+body {
+	
+  background-image:url("https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/02-03-2020_WMO_Sunrise-Mexico.jpg/image1024x768.jpg");
+	font-family: Montserrat, "sans-serif";
+	display: flex;
+	justify-content: center;
+	color: black;
+}
+.mod {
+	background-color: #000000;
+	width: 700px;
+	border: 1px solid;
+	border-radius: 8px;
+	padding: 0 50px 0 50px;
+	background: white;
+}
+	
+.mod >h1 {
+	font-weight: 500;
+	}
+
+.mod >p {
+	font-weight: 300;
+	}
+
+form div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 83px;
+	margin-top: 25px;
+}
+
+form div > label {
+	margin-bottom: 7px;
+	font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+	background: #B7B7B7;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: Montserrat, "sans-serif";
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+
+ 
+   input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+
+
+.btn{
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    background:#1562C9;
+    color: #DAA242;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+ .btn:hover{
+    background: #93A6BF;
+}
+
+
+
+
+
+
+
+
+
+
+
+

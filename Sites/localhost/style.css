@@ -1,0 +1,93 @@
+ /*css du menu*/
+    @import url(https://fonts.googleapis.com/css?family=Questrial); 
+  .zoom {
+		padding: 0px;
+		background-color: white;
+		transition: transform .2s; /* Animation */
+		width: 200px;
+		margin: 0 auto;
+  }
+  .zoom:hover {
+		padding: 50px;
+		transform: scale(1.5); 
+  }
+
+  .titre{
+		text-decoration: underline;
+		font-family:Georgia;
+		color: Blue;
+  }
+  
+  body {
+		font-family: Roboto, sans-serif;
+		
+  }
+  
+  .Menu{
+		border: 1px solid green;
+		background-color: 45B39D;
+		padding: 0;
+		display : flex;
+		justify-content: center;
+		gap: 0.3rem;
+		
+	}
+	
+	.Menu li{
+		list-style-type: none;
+		 width: 120px; 
+		text-align: center;
+		margin: 0.3rem;
+	}
+	
+   .Menu a {
+		display: block;
+		padding: 0.5rem;
+		background-color: #E74C3C;
+		border: 1px solid blue;
+		color: #212F3C;
+		boder-bottom: 3px solid #333;
+		
+		}
+	
+		
+	.Menu a:hover {
+		color: #9ef02;
+		background-color: #f5e49f;
+		border-color: white;
+		
+		}
+		
+	.ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #67B0BD;
+		}
+		
+	.navbar{
+		width: 1200px;
+		height: 75px;
+		margin: auto;
+		}
+	.icon{
+		width: 200px;
+		float: left;
+		heigth: 70px;
+		
+		}
+	
+	.logo{
+		color: 06AC2E;
+		font-size: 35px;
+		font-family: arial;
+		padding-left: 20px;
+		float: left;
+		padding-top: 10px;
+		
+		}
+	
+   
+    
+
