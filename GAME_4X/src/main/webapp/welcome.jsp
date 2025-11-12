@@ -1,0 +1,60 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page import="com.projet.game_4x.models.*" %>
+<%
+    // Récupérer les données de session
+    Joueur joueur = (Joueur) session.getAttribute("joueur");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4X Game - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:active {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bienvenue Sur notre GAME 4X</h1>
+
+<form action="login" method="get">
+    <button type="submit">S'authentifier</button>
+</form>
+
+</body>
+</html>
